@@ -1,0 +1,12 @@
+name: Jenkins Build Trigger
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - name: Trigger Jenkins Build
+      run: curl -X POST "http://localhost:8080/job/privaterepo/build" \
+        --user "muhammadumair:BK7IKMZJHWRXNNKXSG7CYHDG6UOJI"
