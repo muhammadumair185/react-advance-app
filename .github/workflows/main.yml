@@ -26,7 +26,7 @@ jobs:
 
     # Dependencies install karna
     - name: Install dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
 
     # Application build karna
     - name: Build application
